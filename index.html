@@ -1,0 +1,2001 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
+
+<title>to my man 🤎</title>
+
+<link rel="preconnect"
+      href="https://fonts.googleapis.com">
+
+<link rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500;1,600&family=Playfair+Display:ital,wght@0,400;0,500;1,400;1,500&display=swap"
+      rel="stylesheet">
+
+
+<style>
+
+/* ========================================
+   COLOURS
+======================================== */
+
+:root {
+
+    --burgundy: #4A1020;
+
+    --dark: #260A12;
+
+    --cream: #FFF4DF;
+
+    --paper: #F6E8CE;
+
+    --gold: #C9A45C;
+
+    --lightgold: #E4CC97;
+
+}
+
+
+/* ========================================
+   RESET
+======================================== */
+
+* {
+
+    box-sizing: border-box;
+
+    margin: 0;
+
+    padding: 0;
+
+}
+
+html,
+body {
+
+    width: 100%;
+
+    height: 100%;
+
+    overflow: hidden;
+
+}
+
+body {
+
+    background: var(--dark);
+
+    color: var(--cream);
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+}
+
+
+/* ========================================
+   SLIDER
+======================================== */
+
+.slider {
+
+    width: 100vw;
+
+    height: 100vh;
+
+    position: relative;
+
+    overflow: hidden;
+
+}
+
+
+.slide {
+
+    width: 100%;
+
+    height: 100%;
+
+    position: absolute;
+
+    inset: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 45px;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transform:
+        translateX(35px)
+        scale(.98);
+
+    transition:
+        opacity .8s ease,
+        transform .8s ease,
+        visibility .8s ease;
+
+}
+
+
+.slide.active {
+
+    opacity: 1;
+
+    visibility: visible;
+
+    transform:
+        translateX(0)
+        scale(1);
+
+}
+
+
+/* ========================================
+   DECORATIVE FRAME
+======================================== */
+
+.frame {
+
+    position: absolute;
+
+    inset: 18px;
+
+    border:
+        1px solid
+        rgba(201,164,92,.38);
+
+    pointer-events: none;
+
+}
+
+
+.frame::before,
+.frame::after {
+
+    content: "";
+
+    position: absolute;
+
+    width: 55px;
+
+    height: 55px;
+
+    border-color:
+        var(--gold);
+
+    opacity: .7;
+
+}
+
+
+.frame::before {
+
+    left: -1px;
+
+    top: -1px;
+
+    border-left: 1px solid;
+
+    border-top: 1px solid;
+
+}
+
+
+.frame::after {
+
+    right: -1px;
+
+    bottom: -1px;
+
+    border-right: 1px solid;
+
+    border-bottom: 1px solid;
+
+}
+
+
+/* ========================================
+   GENERAL TEXT
+======================================== */
+
+.eyebrow {
+
+    text-transform: uppercase;
+
+    letter-spacing: 4px;
+
+    font-family:
+        "Playfair Display",
+        serif;
+
+    font-size: 11px;
+
+    color:
+        var(--lightgold);
+
+    margin-bottom: 20px;
+
+}
+
+
+button {
+
+    font-family: inherit;
+
+    cursor: pointer;
+
+}
+
+
+/* ========================================
+   SLIDE 1
+======================================== */
+
+.opening {
+
+    text-align: center;
+
+    max-width: 750px;
+
+}
+
+
+.opening h1 {
+
+    font-size:
+        clamp(60px, 10vw, 125px);
+
+    font-style: italic;
+
+    line-height: .9;
+
+    color:
+        var(--cream);
+
+}
+
+
+.opening .line {
+
+    width: 85px;
+
+    height: 1px;
+
+    background:
+        var(--gold);
+
+    margin:
+        30px auto;
+
+}
+
+
+.opening p {
+
+    font-size: 20px;
+
+    font-style: italic;
+
+    color:
+        var(--lightgold);
+
+    margin-bottom: 35px;
+
+}
+
+
+.open-btn {
+
+    padding:
+        13px 28px;
+
+    background:
+        transparent;
+
+    color:
+        var(--cream);
+
+    border:
+        1px solid
+        var(--gold);
+
+    font-size: 17px;
+
+    font-style: italic;
+
+    letter-spacing: 1px;
+
+    transition: .3s ease;
+
+}
+
+
+.open-btn:hover {
+
+    background:
+        var(--gold);
+
+    color:
+        var(--dark);
+
+}
+
+
+/* ========================================
+   SLIDE 2
+======================================== */
+
+.greeting {
+
+    text-align: center;
+
+}
+
+
+.greeting h2 {
+
+    font-size:
+        clamp(48px, 8vw, 95px);
+
+    font-style: italic;
+
+    line-height: 1;
+
+}
+
+
+.greeting .small {
+
+    margin-top: 25px;
+
+    color:
+        var(--lightgold);
+
+    font-size: 18px;
+
+    font-style: italic;
+
+}
+
+
+/* ========================================
+   SLIDE 3
+======================================== */
+
+.listen {
+
+    text-align: center;
+
+    width:
+        min(950px, 90vw);
+
+}
+
+
+.listen h2 {
+
+    font-size:
+        clamp(35px, 5vw, 65px);
+
+    font-style: italic;
+
+}
+
+
+.listen-sub {
+
+    color:
+        var(--lightgold);
+
+    font-size: 18px;
+
+    margin-top: 8px;
+
+    font-style: italic;
+
+}
+
+
+/* ========================================
+   CAR AREA
+======================================== */
+
+.car-area {
+
+    width: 100%;
+
+    height: 400px;
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+}
+
+
+/* ========================================
+   DODGE-STYLE SUV
+======================================== */
+
+.car {
+
+    position: relative;
+
+    width: 340px;
+
+    height: 115px;
+
+    margin-top: 50px;
+
+    animation:
+        carFloat 4s ease-in-out infinite;
+
+}
+
+
+.car-body {
+
+    position: absolute;
+
+    left: 20px;
+
+    bottom: 28px;
+
+    width: 300px;
+
+    height: 70px;
+
+    background:
+        linear-gradient(
+            180deg,
+            #353535,
+            #111
+        );
+
+    border-radius:
+        30px 42px
+        18px 18px;
+
+    border:
+        2px solid
+        var(--gold);
+
+    box-shadow:
+        0 15px 25px
+        rgba(0,0,0,.45);
+
+}
+
+
+.car-roof {
+
+    position: absolute;
+
+    left: 83px;
+
+    top: 3px;
+
+    width: 160px;
+
+    height: 70px;
+
+    background:
+        #171717;
+
+    border:
+        2px solid
+        var(--gold);
+
+    border-bottom: none;
+
+    border-radius:
+        65px 65px
+        0 0;
+
+    transform:
+        skewX(-8deg);
+
+}
+
+
+.window {
+
+    position: absolute;
+
+    top: 15px;
+
+    height: 40px;
+
+    background:
+        #090909;
+
+    border:
+        1px solid #777;
+
+}
+
+
+.window.one {
+
+    left: 100px;
+
+    width: 65px;
+
+    transform:
+        skewX(-8deg);
+
+}
+
+
+.window.two {
+
+    left: 170px;
+
+    width: 57px;
+
+    transform:
+        skewX(8deg);
+
+}
+
+
+.wheel {
+
+    position: absolute;
+
+    bottom: 5px;
+
+    width: 50px;
+
+    height: 50px;
+
+    border-radius: 50%;
+
+    background:
+        #080808;
+
+    border:
+        2px solid
+        var(--gold);
+
+    box-shadow:
+        inset 0 0 0 9px #1c1c1c,
+        inset 0 0 0 16px #777;
+
+}
+
+
+.wheel.left {
+
+    left: 60px;
+
+}
+
+
+.wheel.right {
+
+    right: 60px;
+
+}
+
+
+.light {
+
+    position: absolute;
+
+    width: 12px;
+
+    height: 10px;
+
+    background:
+        var(--lightgold);
+
+    border-radius: 5px;
+
+    top: 52px;
+
+}
+
+
+.light.left {
+
+    left: 26px;
+
+}
+
+
+.light.right {
+
+    right: 26px;
+
+}
+
+
+/* ========================================
+   DOODLES
+======================================== */
+
+.doodle {
+
+    position: absolute;
+
+    color:
+        var(--cream);
+
+    font-size: 22px;
+
+    font-style: italic;
+
+    padding:
+        10px 15px;
+
+    border:
+        1px dashed
+        rgba(201,164,92,.7);
+
+    animation:
+        doodleFloat 3s
+        ease-in-out infinite;
+
+}
+
+
+.doodle.chocolate {
+
+    left: 8%;
+
+    top: 25%;
+
+    transform: rotate(-5deg);
+
+}
+
+
+.doodle.feast {
+
+    right: 8%;
+
+    top: 20%;
+
+    transform: rotate(6deg);
+
+}
+
+
+.doodle.choc2 {
+
+    left: 14%;
+
+    bottom: 12%;
+
+    transform: rotate(4deg);
+
+}
+
+
+.doodle.obviously {
+
+    right: 13%;
+
+    bottom: 12%;
+
+    transform: rotate(-7deg);
+
+}
+
+
+@keyframes carFloat {
+
+    0%,100% {
+
+        transform:
+            translateY(0);
+
+    }
+
+    50% {
+
+        transform:
+            translateY(-7px);
+
+    }
+
+}
+
+
+@keyframes doodleFloat {
+
+    0%,100% {
+
+        margin-top: 0;
+
+    }
+
+    50% {
+
+        margin-top: -8px;
+
+    }
+
+}
+
+
+/* ========================================
+   SLIDE 4
+======================================== */
+
+.little-things {
+
+    text-align: center;
+
+    width:
+        min(900px, 90vw);
+
+}
+
+
+.little-things h2 {
+
+    font-size:
+        clamp(45px, 7vw, 80px);
+
+    font-style: italic;
+
+    margin-bottom: 35px;
+
+}
+
+
+/* ========================================
+   FOLDED PAPER
+======================================== */
+
+.paper-wrapper {
+
+    width: 350px;
+
+    height: 240px;
+
+    margin: auto;
+
+    perspective: 1200px;
+
+    cursor: pointer;
+
+}
+
+
+.paper {
+
+    width: 100%;
+
+    height: 100%;
+
+    position: relative;
+
+    transform-style: preserve-3d;
+
+    transition:
+        transform 1s
+        cubic-bezier(.2,.7,.2,1);
+
+}
+
+
+.paper.open {
+
+    transform:
+        rotateX(180deg);
+
+}
+
+
+.paper-front,
+.paper-back {
+
+    position: absolute;
+
+    inset: 0;
+
+    backface-visibility:
+        hidden;
+
+    background:
+        var(--paper);
+
+    color:
+        var(--burgundy);
+
+    box-shadow:
+        0 25px 50px
+        rgba(0,0,0,.3);
+
+    border:
+        1px solid
+        rgba(201,164,92,.8);
+
+}
+
+
+/* FRONT */
+
+.paper-front {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+}
+
+
+.paper-front::before {
+
+    content: "";
+
+    position: absolute;
+
+    right: 0;
+
+    top: 0;
+
+    border-style: solid;
+
+    border-width:
+        0 55px 55px 0;
+
+    border-color:
+        transparent
+        #e4d1ae
+        transparent
+        transparent;
+
+}
+
+
+.paper-front h3 {
+
+    font-size: 34px;
+
+    font-style: italic;
+
+}
+
+
+.paper-front span {
+
+    margin-top: 15px;
+
+    font-size: 14px;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+
+}
+
+
+/* BACK */
+
+.paper-back {
+
+    transform:
+        rotateX(180deg);
+
+    padding: 28px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+}
+
+
+.paper-back h3 {
+
+    font-size: 28px;
+
+    font-style: italic;
+
+    margin-bottom: 15px;
+
+}
+
+
+.paper-back p {
+
+    font-size: 17px;
+
+    line-height: 1.4;
+
+    font-style: italic;
+
+}
+
+
+.paper-back .tiny {
+
+    margin-top: 20px;
+
+    color:
+        #81566a;
+
+    font-size: 14px;
+
+}
+
+
+/* ========================================
+   LETTER
+======================================== */
+
+.letter-slide {
+
+    padding: 30px;
+
+}
+
+
+.letter {
+
+    width:
+        min(850px, 90vw);
+
+    height:
+        min(80vh, 700px);
+
+    background:
+        var(--paper);
+
+    color:
+        var(--burgundy);
+
+    padding:
+        45px 55px;
+
+    position: relative;
+
+    box-shadow:
+        0 25px 70px
+        rgba(0,0,0,.35);
+
+    border:
+        1px solid
+        rgba(201,164,92,.7);
+
+    overflow-y: auto;
+
+}
+
+
+.letter::before {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 13px;
+
+    border:
+        1px solid
+        rgba(74,16,32,.18);
+
+    pointer-events: none;
+
+}
+
+
+.letter h2 {
+
+    position: relative;
+
+    font-size: 36px;
+
+    font-style: italic;
+
+    margin-bottom: 25px;
+
+}
+
+
+.letter p {
+
+    position: relative;
+
+    font-size: 19px;
+
+    line-height: 1.55;
+
+    font-style: italic;
+
+    margin-bottom: 18px;
+
+}
+
+
+.signature {
+
+    margin-top: 25px;
+
+    font-size: 22px !important;
+
+}
+
+
+/* ========================================
+   FINAL
+======================================== */
+
+.final {
+
+    text-align: center;
+
+}
+
+
+.final h1 {
+
+    font-size:
+        clamp(60px, 10vw, 120px);
+
+    font-style: italic;
+
+    line-height: .9;
+
+}
+
+
+.final-line {
+
+    width: 80px;
+
+    height: 1px;
+
+    background:
+        var(--gold);
+
+    margin:
+        30px auto;
+
+}
+
+
+.heart {
+
+    font-size: 30px;
+
+    color:
+        var(--gold);
+
+    animation:
+        heartBeat 1.5s
+        ease-in-out infinite;
+
+}
+
+
+@keyframes heartBeat {
+
+    0%,100% {
+
+        transform:
+            scale(1);
+
+    }
+
+    50% {
+
+        transform:
+            scale(1.2);
+
+    }
+
+}
+
+
+/* ========================================
+   NAVIGATION
+======================================== */
+
+.nav {
+
+    position: fixed;
+
+    bottom: 25px;
+
+    left: 50%;
+
+    transform:
+        translateX(-50%);
+
+    z-index: 500;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+
+}
+
+
+.nav button {
+
+    width: 35px;
+
+    height: 35px;
+
+    border:
+        1px solid
+        rgba(201,164,92,.6);
+
+    background:
+        rgba(38,10,18,.7);
+
+    color:
+        var(--cream);
+
+    font-size: 17px;
+
+    transition: .3s;
+
+}
+
+
+.nav button:hover {
+
+    background:
+        var(--gold);
+
+    color:
+        var(--dark);
+
+}
+
+
+.dots {
+
+    display: flex;
+
+    gap: 6px;
+
+}
+
+
+.dot {
+
+    width: 5px;
+
+    height: 5px;
+
+    border-radius: 50%;
+
+    background:
+        rgba(255,244,223,.35);
+
+    transition: .3s;
+
+}
+
+
+.dot.active {
+
+    width: 22px;
+
+    border-radius: 10px;
+
+    background:
+        var(--gold);
+
+}
+
+
+/* ========================================
+   RESPONSIVE
+======================================== */
+
+@media(max-width:600px) {
+
+    .slide {
+
+        padding: 30px;
+
+    }
+
+
+    .frame {
+
+        inset: 10px;
+
+    }
+
+
+    .opening h1 {
+
+        font-size: 65px;
+
+    }
+
+
+    .car {
+
+        transform: scale(.72);
+
+    }
+
+
+    .doodle {
+
+        font-size: 17px;
+
+    }
+
+
+    .doodle.chocolate {
+
+        left: 0;
+
+        top: 18%;
+
+    }
+
+
+    .doodle.feast {
+
+        right: 0;
+
+        top: 15%;
+
+    }
+
+
+    .doodle.choc2 {
+
+        left: 2%;
+
+        bottom: 8%;
+
+    }
+
+
+    .doodle.obviously {
+
+        right: 2%;
+
+        bottom: 8%;
+
+    }
+
+
+    .paper-wrapper {
+
+        width: 310px;
+
+        height: 230px;
+
+    }
+
+
+    .letter {
+
+        padding:
+            35px 30px;
+
+    }
+
+
+    .letter p {
+
+        font-size: 17px;
+
+    }
+
+}
+
+
+/* scrollbar */
+
+::-webkit-scrollbar {
+
+    width: 4px;
+
+}
+
+
+::-webkit-scrollbar-thumb {
+
+    background:
+        rgba(74,16,32,.5);
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<div class="slider">
+
+
+<!-- ====================================
+     SLIDE 1
+==================================== -->
+
+<section class="slide active">
+
+    <div class="frame"></div>
+
+    <div class="opening">
+
+        <div class="eyebrow">
+            a little something for you
+        </div>
+
+        <h1>
+            to my man 🤎
+        </h1>
+
+        <div class="line"></div>
+
+        <p>
+            because apparently one message wasn't enough
+        </p>
+
+        <button
+            class="open-btn"
+            onclick="startExperience()"
+        >
+            open this →
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- ====================================
+     SLIDE 2
+==================================== -->
+
+<section class="slide">
+
+    <div class="frame"></div>
+
+    <div class="greeting">
+
+        <h2>
+            happy boyfriend's day
+        </h2>
+
+        <div class="small">
+            yes this whole website is actually for you 😭
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ====================================
+     SLIDE 3
+==================================== -->
+
+<section class="slide">
+
+    <div class="frame"></div>
+
+    <div class="listen">
+
+        <h2>
+            POV i actually listen to you
+        </h2>
+
+        <div class="listen-sub">
+
+            you casually told me these things<br>
+
+            and i remembered
+
+        </div>
+
+
+        <div class="car-area">
+
+
+            <div class="doodle chocolate">
+                🍫 chocolate
+            </div>
+
+
+            <div class="doodle feast">
+                🍦 Feast
+            </div>
+
+
+            <div class="doodle choc2">
+                🍫 more chocolate
+            </div>
+
+
+            <div class="doodle obviously">
+                obviously
+            </div>
+
+
+            <div class="car">
+
+                <div class="car-roof"></div>
+
+                <div class="window one"></div>
+
+                <div class="window two"></div>
+
+
+                <div class="car-body">
+
+                    <div class="light left"></div>
+
+                    <div class="light right"></div>
+
+                </div>
+
+
+                <div class="wheel left"></div>
+
+                <div class="wheel right"></div>
+
+            </div>
+
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ====================================
+     SLIDE 4
+==================================== -->
+
+<section class="slide">
+
+    <div class="frame"></div>
+
+    <div class="little-things">
+
+        <h2>
+            our lil things
+        </h2>
+
+
+        <div
+            class="paper-wrapper"
+            onclick="openPaper()"
+        >
+
+            <div
+                class="paper"
+                id="paper"
+            >
+
+
+                <div class="paper-front">
+
+                    <h3>
+                        our lil things
+                    </h3>
+
+                    <span>
+                        click me ↗
+                    </span>
+
+                </div>
+
+
+                <div class="paper-back">
+
+                    <h3>
+                        the little things
+                    </h3>
+
+                    <p>
+
+                        random conversations<br>
+
+                        stupid arguments<br>
+
+                        inside jokes<br>
+
+                        random texts<br>
+
+                        things only we find funny<br>
+
+                        moments that mean nothing
+                        to anyone else
+
+                    </p>
+
+
+                    <div class="tiny">
+
+                        i think thats my
+                        favourite part of us 🤎
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ====================================
+     SLIDE 5
+==================================== -->
+
+<section class="slide letter-slide">
+
+    <div class="frame"></div>
+
+
+    <div class="letter">
+
+        <h2>
+            happy boyfriend's day to you 😭
+        </h2>
+
+
+        <p>
+
+            i dont really know how to write
+            these things without making them
+            sound cheesy but ill try
+
+        </p>
+
+
+        <p>
+
+            somewhere between all our random
+            conversations stupid arguments
+            laughing at things that probably
+            arent even funny and just doing
+            absolutely nothing you became such
+            a normal and important part of my
+            life that i genuinely cant imagine
+            it without you now
+
+        </p>
+
+
+        <p>
+
+            and honestly thats my favourite
+            thing about us
+
+        </p>
+
+
+        <p>
+
+            it doesnt always have to be some
+            big romantic moment its the random
+            little things the inside jokes the
+            way one message from you can
+            completely change my mood and all
+            those moments that probably seem
+            insignificant but somehow stay with me
+
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- ====================================
+     SLIDE 6
+==================================== -->
+
+<section class="slide letter-slide">
+
+    <div class="frame"></div>
+
+
+    <div class="letter">
+
+
+        <p>
+
+            youre not even just my boyfriend
+            at this point youre my baby sometimes
+            my best friend sometimes my therapist
+            and sometimes apparently my dad because
+            you love yelling at me to do things as
+            if im actually going to listen to you
+            which obviously i wont
+
+        </p>
+
+
+        <p>
+            dw i will 😭
+        </p>
+
+
+        <p>
+
+            i dont say it every day but i really
+            do appreciate having you in my life
+            and i wouldnt trade what we have
+            for anything
+
+        </p>
+
+
+        <p>
+
+            so yeaaaa happy bf day rohieee
+
+        </p>
+
+
+        <p class="signature">
+
+            youre my favourite person<br>
+
+            is that even a question 😭
+
+        </p>
+
+
+    </div>
+
+</section>
+
+
+<!-- ====================================
+     SLIDE 7
+==================================== -->
+
+<section class="slide">
+
+    <div class="frame"></div>
+
+
+    <div class="final">
+
+        <h1>
+
+            i love you<br>
+
+            romeo
+
+        </h1>
+
+
+        <div class="final-line"></div>
+
+
+        <div class="heart">
+            🤎
+        </div>
+
+    </div>
+
+</section>
+
+
+</div>
+
+
+<!-- ====================================
+     NAVIGATION
+==================================== -->
+
+<div class="nav">
+
+    <button onclick="previousSlide()">
+        ←
+    </button>
+
+
+    <div
+        class="dots"
+        id="dots"
+    ></div>
+
+
+    <button onclick="nextSlide()">
+        →
+    </button>
+
+</div>
+
+
+<script>
+
+/* ========================================
+   SLIDE SYSTEM
+======================================== */
+
+const slides =
+    document.querySelectorAll(".slide");
+
+
+let currentSlide = 0;
+
+
+/* CREATE DOTS */
+
+const dotsContainer =
+    document.getElementById("dots");
+
+
+slides.forEach(
+    (slide, index) => {
+
+        const dot =
+            document.createElement("div");
+
+        dot.classList.add("dot");
+
+
+        if(index === 0) {
+
+            dot.classList.add("active");
+
+        }
+
+
+        dot.onclick = function() {
+
+            goToSlide(index);
+
+        };
+
+
+        dotsContainer.appendChild(dot);
+
+    }
+);
+
+
+const dots =
+    document.querySelectorAll(".dot");
+
+
+/* GO TO SLIDE */
+
+function goToSlide(index) {
+
+
+    if(index < 0) {
+
+        index =
+            slides.length - 1;
+
+    }
+
+
+    if(index >= slides.length) {
+
+        index = 0;
+
+    }
+
+
+    slides[currentSlide]
+        .classList
+        .remove("active");
+
+
+    dots[currentSlide]
+        .classList
+        .remove("active");
+
+
+    currentSlide = index;
+
+
+    slides[currentSlide]
+        .classList
+        .add("active");
+
+
+    dots[currentSlide]
+        .classList
+        .add("active");
+
+}
+
+
+/* NEXT */
+
+function nextSlide() {
+
+    goToSlide(
+        currentSlide + 1
+    );
+
+}
+
+
+/* PREVIOUS */
+
+function previousSlide() {
+
+    goToSlide(
+        currentSlide - 1
+    );
+
+}
+
+
+/* ========================================
+   OPEN EXPERIENCE
+======================================== */
+
+function startExperience() {
+
+
+    /*
+       Open Khat in another tab.
+    */
+
+    window.open(
+        "https://youtu.be/LUgpPmj6nR8",
+        "_blank"
+    );
+
+
+    /*
+       Move website to slide 2.
+    */
+
+    nextSlide();
+
+}
+
+
+/* ========================================
+   FOLDED PAPER
+======================================== */
+
+function openPaper() {
+
+    const paper =
+        document.getElementById("paper");
+
+
+    paper.classList.toggle("open");
+
+}
+
+
+/* ========================================
+   KEYBOARD
+======================================== */
+
+document.addEventListener(
+    "keydown",
+    function(event) {
+
+
+        if(
+            event.key === "ArrowRight"
+        ) {
+
+            nextSlide();
+
+        }
+
+
+        if(
+            event.key === "ArrowLeft"
+        ) {
+
+            previousSlide();
+
+        }
+
+    }
+);
+
+
+/* ========================================
+   SWIPE
+======================================== */
+
+let touchStartX = 0;
+
+
+document.addEventListener(
+    "touchstart",
+    function(event) {
+
+        touchStartX =
+            event.changedTouches[0]
+            .screenX;
+
+    }
+);
+
+
+document.addEventListener(
+    "touchend",
+    function(event) {
+
+
+        const touchEndX =
+            event.changedTouches[0]
+            .screenX;
+
+
+        const difference =
+            touchStartX - touchEndX;
+
+
+        if(
+            Math.abs(difference) < 50
+        ) {
+
+            return;
+
+        }
+
+
+        if(difference > 0) {
+
+            nextSlide();
+
+        }
+
+        else {
+
+            previousSlide();
+
+        }
+
+    }
+);
+
+</script>
+
+
+</body>
+
+</html>
